@@ -1,13 +1,7 @@
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Page() {
   return (
-    
     <div className="flex flex-col gap-y-4 p-4">
       <h1>Dashboard</h1>
       <div className="bg-red-500 text-white p-4">TEST</div>
@@ -15,7 +9,6 @@ export default function Page() {
       <SignedIn>
         <UserButton />
       </SignedIn>
-
 
       <SignedOut>
         <SignInButton mode="modal">
@@ -25,7 +18,5 @@ export default function Page() {
         </SignInButton>
       </SignedOut>
     </div>
-    
   );
-  
 }
